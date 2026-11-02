@@ -52,8 +52,10 @@ check_contrast = true
 kitty = { template = "kitty.conf", target = "~/.config/kitty/colors.conf" }
 waybar = { src = "waybar.css", dst = "~/.config/waybar/colors.css" }
 niri = { template = "niri.kdl",   target = "~/.config/niri/colors.kdl" }
-vesktop = { template = "discord.css", target = "~/.config/vesktop/themes/theme.css"}
+equicord = { template = "discord.css", target = "~/.config/Equicord/themes/theme.css"}
 rofi = { template = "rofi.rasi", target = "~/.config/rofi/theme.rasi" }
+vscode = { src = 'vscode.json', dst = '~/.cache/wallust/colors.json' }
+vscode2 = { src = 'vscode', dst = '~/.cache/wallust/colors' }
 
 [hooks]
 # Run commands when wallust is invoked. Useful to avoid scripting.

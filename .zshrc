@@ -20,8 +20,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
-eval "$(fixit init zsh)"
-eval "$(tirith init --shell zsh)"
 
 alias ls='ls -a --color=always'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias neofetch='fastfetch'

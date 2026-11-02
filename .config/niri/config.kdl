@@ -1,5 +1,5 @@
 include "colors.kdl"
-
+include "game-specific.kdl"
 input {
     keyboard {
         xkb {
@@ -21,8 +21,8 @@ input {
 }
 
 output "DP-1" {
-    mode "2560x1440@164.956"
-    scale 1
+    mode "1920x1080@165.003"
+    scale 1 
     variable-refresh-rate on-demand=true
 
     focus-at-startup
@@ -70,10 +70,6 @@ prefer-no-csd
 
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
 
-environment {
-    ELECTRON_OZONE_PLATFORM_HINT "wayland"
-}
-
 cursor {
     hide-after-inactive-ms 10000
 }
@@ -89,45 +85,29 @@ window-rule {
     geometry-corner-radius 8
 }
 
-workspace "browser" {
-    open-on-output "DP-1"
-}
-
-workspace "discord" {
-    open-on-output "DP-2"
-}
-
-workspace "spotify" {
-    open-on-output "DP-2"
-}
-
-window-rule {
-    match title="Zen Browser"
-    
-    open-maximized true
-    open-on-workspace "browser"
-    open-on-output "DP-1"
+blur {
+    passes 4
+    offset 1
+    noise 0.02
+    saturation 1.5
 }
 
 window-rule {
     match title="Discord"
-    
-    open-maximized true
-    open-on-workspace "discord"
-    open-on-output "DP-2"
+
+    background-effect {
+        blur true
+    }
+    draw-border-with-background false
 }
 
-window-rule {
-    match app-id="ncspot"
-
-    open-maximized true
-    open-on-workspace "spotify"
-    open-on-output "DP-2"
-}
-
-spawn-at-startup "swww-daemon"
-spawn-at-startup "zen-browser"
-spawn-sh-at-startup "ncspot"
+spawn-at-startup "/usr/lib/soteria-polkit/soteria"
+spawn-at-startup "dbus-update-activation-environment" "--systemd" "DISPLAY" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP"
+spawn-at-startup "gnome-keyring-daemon" "--start" "--components=secrets,pkcs11,ssh"
+spawn-at-startup "awww-daemon"
+spawn-at-startup "helium-browser"
+spawn-at-startup "sunshine"
+spawn-at-startup "fcitx5"
 
 animations {
 
@@ -199,6 +179,7 @@ recent-windows {
 binds {
     Mod+Q { spawn "kitty"; }
     Mod+Space { spawn-sh "rofi -show drun"; }
+    Ctrl+Alt+Space { spawn-sh "rofi -show drun"; }
     Super+Alt+L { spawn "swaylock"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }

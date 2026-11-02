@@ -57,6 +57,12 @@
       "format": "{name}"
     },
     {
+      "type": "gpu",
+      "key": "gpu",
+      "keyColor": "blue",
+      "format": "{name}"
+    },
+    {
       "type": "memory",
       "key": "ram",
       "keyColor": "yellow",

@@ -1,0 +1,21 @@
+window-rule {
+    match app-id="windowkill"
+
+    open-maximized-to-edges true
+
+    border {
+        off
+    }
+}
+
+binds {
+    Alt+Z { spawn-sh r#"
+        SECONDS=0
+        while [[ 2 -gt $SECONDS ]]; do
+        if niri msg windows | grep 'App ID: "gsr-ui"' > /dev/null; then
+            niri msg action move-window-to-floating
+            exit
+        fi
+        done
+    "#; }
+}

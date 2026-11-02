@@ -1,0 +1,39 @@
+workspace "browser" {
+    open-on-output "DP-1"
+}
+
+workspace "discord" {
+    open-on-output "DP-2"
+}
+
+workspace "spotify" {
+    open-on-output "DP-2"
+}
+
+window-rule {
+    match title="Zen Browser"
+    
+    open-maximized true
+    open-on-workspace "browser"
+    open-on-output "DP-1"
+}
+
+window-rule {
+    match title="Discord"
+    
+    open-maximized true
+    open-on-workspace "discord"
+    open-on-output "DP-2"
+
+    background-effect {
+        blur true
+    }
+}
+
+window-rule {
+    match app-id="ncspot"
+
+    open-maximized true
+    open-on-workspace "spotify"
+    open-on-output "DP-2"
+}

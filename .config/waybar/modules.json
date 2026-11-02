@@ -1,0 +1,126 @@
+{
+  "group/extras": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 400,
+      "children-class": "extras",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/menu",
+      "tray"
+    ]
+  },
+  "group/audio": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 400,
+      "children-class": "audio",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "pulseaudio"
+    ]
+  },
+  "niri/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "default": "󰄰",
+      "active": "󰄯"
+    }
+  },
+  "custom/arch": {
+    "format": "{icon}",
+    "format-icons": [
+      "<span size='12pt'>󰣇</span>"
+    ]
+  },
+  "cpu": {
+    "format": "{icon}",
+    "format-icons": [
+      "<span size='10pt'></span>"
+    ],
+    "states": {
+        "critical": 80
+    },
+    "interval": 1,
+    "tooltip": true,
+    "tooltip-format": "CPU Frequency: {avg_frequency} GHz"
+  },
+  "memory": {
+    "interval": 1,
+    "format": "{icon}",
+    "format-icons": [
+      "<span size='10pt'></span>"
+    ],
+    "states": {
+        "critical": 90
+    },
+    "tooltip": true,
+    "tooltip-format": "{avail:0.1f}G/{total:0.1f}G available.\n{swapAvail:0.1f}G/{swapTotal:0.1f}G swap available."
+  },
+  "clock": {
+    "interval": 1,
+    "format": "{:%I\n%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>"
+  },
+  "mpris": {
+    "format": "<span size='12pt'></span>",
+    "interval": 1,
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "on-click-middle": "playerctl previous",
+    "tooltip": true,
+    "tooltip-format": "{title} - {player}"
+  },
+  "custom/menu": {
+    "format": "<span size='16pt'>󰅃</span>",
+    "tooltip": false
+  },
+  "tray": {
+    "spacing": 16,
+    "reverse-direction": true,
+    "icon-size": 16,
+    "show-passive-items": false
+  },
+  "privacy": {
+    "icon-size": 14,
+    "transition-duration": 250,
+    "modules": [
+      {
+        "type": "screenshare",
+        "tooltip": false
+      }
+    ],
+    "ignore": [
+      {
+        "type": "screenshare",
+        "name": "obs"
+      }
+    ]
+  },
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": "<span size='14pt'>󰍬</span>",
+    "format-source-muted": "<span size='14pt'>󰍭</span>",
+    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+    "on-click-right": "pavucontrol -t 4",
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "interval": 1,
+    "format": "{icon}",
+    "format-icons": [
+      "<span size='14pt'>󰕿</span>",
+      "<span size='14pt'>󰖀</span>",
+      "<span size='14pt'>󰕾</span>"
+    ],
+    "format-muted": "<span size='14pt'>󰝟</span>",
+    "on-click-right": "pavucontrol -t 3",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "reverse-scrolling": true,
+    "tooltip": true,
+    "tooltip-format": "Volume: {volume}%\n{desc}"
+  }
+}

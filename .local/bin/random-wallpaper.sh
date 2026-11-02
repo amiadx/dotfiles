@@ -4,14 +4,12 @@ WALLPAPER_DIR="$HOME/.config/wallpapers"
 
 WALLPAPER=$(find "$WALLPAPER_DIR" -type f | shuf -n 1)
 
-if ! pgrep -x swww-daemon > /dev/null; then
-    swww-daemon &
+if ! pgrep -x awww-daemon > /dev/null; then
+    awww-daemon &
     sleep 1
 fi
 
-niri msg action do-screen-transition
-
-swww img "$WALLPAPER" \
+awww img "$WALLPAPER" \
     --transition-type grow \
     --transition-duration 1
 

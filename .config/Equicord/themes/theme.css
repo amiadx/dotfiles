@@ -87,28 +87,28 @@ body {
 
     /* text colors */
     --text-0: var(--bg-4); /* text on colored elements */
-    --text-1: #E4D5CA; /* other normally white text */
-    --text-2: #E4D5CA; /* headings and important text */
-    --text-3: #E4D5CA; /* normal text */
-    --text-4: #9C826E; /* icon buttons and channels */
-    --text-5: #9C826E; /* muted channels/chats and timestamps */
+    --text-1: #D5D4DC; /* other normally white text */
+    --text-2: #D5D4DC; /* headings and important text */
+    --text-3: #D5D4DC; /* normal text */
+    --text-4: #898693; /* icon buttons and channels */
+    --text-5: #898693; /* muted channels/chats and timestamps */
 
     /* background and dark colors */
-    --bg-1: #1F1915; /* dark buttons when clicked */
-    --bg-2: #1F1915; /* dark buttons */
-    --bg-3: #1F1915; /* spacing, secondary elements */
-    --bg-4: #1F1915; /* main background color */
+    --bg-1: #1F1F25; /* dark buttons when clicked */
+    --bg-2: #1F1F25; /* dark buttons */
+    --bg-3: #1F1F25; /* spacing, secondary elements */
+    --bg-4: #1F1F25; /* main background color */
     --hover: oklch(54% 0 0 / 0.1); /* channels and buttons when hovered */
     --active: oklch(54% 0 0 / 0.2); /* channels and buttons when clicked or selected */
     --active-2: oklch(54% 0 0 / 0.3); /* extra state for transparent buttons */
     --message-hover: var(--hover); /* messages when hovered */
 
     /* accent colors */
-    --accent-1: #35A27B; /* links and other accent text */
-    --accent-2: #35A27B; /* small accent elements */
-    --accent-3: #35A27B; /* accent buttons */
-    --accent-4: #35A27B; /* accent buttons when hovered */
-    --accent-5: #35A27B; /* accent buttons when clicked */
+    --accent-1: #A77E8C; /* links and other accent text */
+    --accent-2: #A77E8C; /* small accent elements */
+    --accent-3: #A77E8C; /* accent buttons */
+    --accent-4: #A77E8C; /* accent buttons when hovered */
+    --accent-5: #A77E8C; /* accent buttons when clicked */
     --accent-new: var(--red-2); /* stuff that's normally red like mute/deafen buttons */
     --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
     --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
@@ -126,7 +126,7 @@ body {
     --border-light: var(--hover); /* general light border color */
     --border: var(--active); /* general normal border color */
     --border-hover: var(--accent-2); /* border color of panels when hovered */
-    --button-border: #9C826E; /* neutral border color of buttons */
+    --button-border: #898693; /* neutral border color of buttons */
 
     /* base colors */
     --red-1: oklch(75% 0.13 0);

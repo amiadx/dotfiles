@@ -1,13 +1,13 @@
 
 * {
-    bg0:    #1F1915CC;
-    bg1:    #1F1915;
-    bg2:    #9C826E80;
-    bg3:    #9C826EBF;
-    fg0:    #E4D5CA;
-    fg1:    #E4D5CA;
-    fg2:    #918377;
-    fg3:    #E4D5CA;
+    bg0:    #1F1F25CC;
+    bg1:    #1F1F25;
+    bg2:    #89869380;
+    bg3:    #898693BF;
+    fg0:    #D5D4DC;
+    fg1:    #D5D4DC;
+    fg2:    #838289;
+    fg3:    #D5D4DC;
 }
 
 * {

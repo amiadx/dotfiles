@@ -2,23 +2,23 @@
 
 layout {
     border {
-        active-color "#E4D5CA"
-        inactive-color "#9C826E"
-        urgent-color "#9C826E"
+        active-color "#D5D4DC"
+        inactive-color "#898693"
+        urgent-color "#898693"
     }
 
     insert-hint {
-        color "#E4D5CA80"
+        color "#D5D4DC80"
     }
 }
 
 overview {
-    backdrop-color "#1F1915cc"
+    backdrop-color "#1F1F25cc"
 }
 
 recent-windows {
     highlight {
-        active-color "#E4D5CAff"
-        urgent-color "#9C826Eff"
+        active-color "#D5D4DCff"
+        urgent-color "#898693ff"
     }
 }
