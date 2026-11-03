@@ -24,3 +24,5 @@ eval "$(zoxide init zsh)"
 alias ls='ls -a --color=always'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias neofetch='fastfetch'
+
+alias sudo="sudo-rs"
